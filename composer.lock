@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "59d4e070cba40677e5a179b147026de9",
-    "content-hash": "b5212fdb68544713df37573b4a894933",
+    "hash": "b35f6949f6011d974bfab4aa55e0c377",
+    "content-hash": "efb676bbc1d4606a2bee5bc1772c2626",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -408,6 +408,63 @@
                 "zf2"
             ],
             "time": "2016-04-20 17:34:49"
+        },
+        {
+            "name": "zendframework/zend-db",
+            "version": "2.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-db.git",
+                "reference": "c9fa8fdab194093fff58e4f1180c7e15d80a2cb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-db/zipball/c9fa8fdab194093fff58e4f1180c7e15d80a2cb5",
+                "reference": "c9fa8fdab194093fff58e4f1180c7e15d80a2cb5",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0",
+                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+                "zendframework/zend-hydrator": "^1.1 || ^2.1",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3"
+            },
+            "suggest": {
+                "zendframework/zend-eventmanager": "Zend\\EventManager component",
+                "zendframework/zend-hydrator": "Zend\\Hydrator component for using HydratingResultSets",
+                "zendframework/zend-servicemanager": "Zend\\ServiceManager component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev",
+                    "dev-develop": "2.9-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Db",
+                    "config-provider": "Zend\\Db\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Db\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-db",
+            "keywords": [
+                "db",
+                "zf2"
+            ],
+            "time": "2016-04-14 14:27:16"
         },
         {
             "name": "zendframework/zend-diactoros",
