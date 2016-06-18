@@ -8,6 +8,10 @@ return [
         ],
         'factories' => [
             App\Action\HomePageAction::class => App\Action\HomePageFactory::class,
+            App\Action\Beer\Index::class => App\Factory\Beer\Index::class,
+            App\Action\Beer\Update::class => App\Factory\Beer\Update::class,
+            App\Action\Beer\Create::class => App\Factory\Beer\Create::class,
+            App\Action\Beer\Delete::class => App\Factory\Beer\Delete::class,
         ],
     ],
 
@@ -24,5 +28,30 @@ return [
             'middleware' => App\Action\PingAction::class,
             'allowed_methods' => ['GET'],
         ],
+        [
+            'name' => 'beer.index',
+            'path' => '/beer',
+            'middleware' => App\Action\Beer\Index::class,
+            'allowed_methods' => ['GET'],
+        ],
+        [
+            'name' => 'beer.create',
+            'path' => '/beer',
+            'middleware' => App\Action\Beer\Create::class,
+            'allowed_methods' => ['POST'],
+        ],
+        [
+            'name' => 'beer.update',
+            'path' => '/beer/{id}',
+            'middleware' => App\Action\Beer\Update::class,
+            'allowed_methods' => ['PUT'],
+        ],
+        [
+            'name' => 'beer.delete',
+            'path' => '/beer/{id}',
+            'middleware' => App\Action\Beer\Delete::class,
+            'allowed_methods' => ['DELETE'],
+        ],
+
     ],
 ];
