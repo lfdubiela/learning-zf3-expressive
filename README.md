@@ -4,6 +4,6 @@
 
 http://cl.ly/2e473b2M2k1Z
 
-    cd pos-webdev-expressive
-    php ../composer.phar require zendframework/zend-db
+# Material da Disciplina
 
+http://cl.ly/1n3E0K291I3h
