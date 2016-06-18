@@ -46,6 +46,7 @@ return [
 
         'routing' => [
             'middleware' => [
+                App\Middleware\Auth::class,
                 ApplicationFactory::ROUTING_MIDDLEWARE,
                 Helper\UrlHelperMiddleware::class,
                 // Add more middleware here that needs to introspect the routing
