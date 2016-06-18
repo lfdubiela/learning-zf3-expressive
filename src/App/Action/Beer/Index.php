@@ -2,11 +2,11 @@
 
 namespace App\Action\Beer;
 
+use Zend\Stratigility\MiddlewareInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-// use Zend\Diactoros\Response\HtmlResponse;
 
-class Index
+class Index implements MiddlewareInterface
 {
     private $tableGateway;
 
@@ -21,6 +21,6 @@ class Index
 
         $response->getBody()->write(serialize($beers));
 
-        return $response;
+        return $next($request, $response);
     }
 }

@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Style</th>
+      <th>Img</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach ($this->content as $beer): ?>
+      <tr>
+        <th scope="row"><?php echo $beer['id'];?></th>
+        <td><?php echo $beer['name'];?></td>
+        <td><?php echo $beer['style'];?></td>
+        <td><img src="<?php echo $beer['img'];?>"></td>
+        <td><a href="/beer/edit/<?php echo $beer['id'];?>">Edit</a></td>
+      </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>

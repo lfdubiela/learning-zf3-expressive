@@ -29,6 +29,6 @@ class Update
 
         $response->getBody()->write(serialize($id));
 
-        return $response;
+        return $next($request, $response);
     }
 }

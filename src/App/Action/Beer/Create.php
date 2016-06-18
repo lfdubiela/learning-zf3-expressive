@@ -23,6 +23,6 @@ class Create
 
         $response->getBody()->write(serialize($this->tableGateway->getLastInsertValue()));
 
-        return $response;
+        return $next($request, $response);
     }
 }

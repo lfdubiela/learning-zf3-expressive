@@ -27,6 +27,6 @@ class Delete
 
         $response->getBody()->write(serialize('Deleted'));
 
-        return $response;
+        return $next($request, $response);
     }
 }
