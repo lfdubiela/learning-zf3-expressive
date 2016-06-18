@@ -11,4 +11,8 @@ return [
             'template_error' => 'error::error',
         ],
     ],
+    'db' => [
+        'driver' => 'Pdo_Sqlite',
+        'database' => 'beers.db',
+    ],
 ];

@@ -19,6 +19,7 @@ return [
         'factories' => [
             Application::class => ApplicationFactory::class,
             Helper\UrlHelper::class => Helper\UrlHelperFactory::class,
+            App\Factory\Db\Adapter\Adapter::class => App\Factory\Db\Adapter\Adapter::class
         ],
     ],
 ];
