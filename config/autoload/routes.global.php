@@ -6,6 +6,7 @@ return [
             Zend\Expressive\Router\RouterInterface::class => Zend\Expressive\Router\FastRouteRouter::class,
             App\Action\PingAction::class => App\Action\PingAction::class,
             App\Middleware\Format\Json::class => App\Middleware\Format\Json::class,
+            App\Middleware\Validate::class => App\Middleware\Validate::class,
         ],
         'factories' => [
             App\Action\HomePageAction::class => App\Action\HomePageFactory::class,
@@ -44,6 +45,7 @@ return [
             'name' => 'beer.create',
             'path' => '/beer',
             'middleware' => [
+                App\Middleware\Validate::class,
                 App\Action\Beer\Create::class,
                 App\Middleware\Format\Json::class,
             ],
@@ -53,6 +55,7 @@ return [
             'name' => 'beer.update',
             'path' => '/beer/{id}',
             'middleware' => [
+                App\Middleware\Validate::class,
                 App\Action\Beer\Update::class,
                 App\Middleware\Format\Json::class,
             ],
