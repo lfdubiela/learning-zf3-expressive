@@ -7,7 +7,7 @@ use Zend\Stratigility\MiddlewareInterface;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-class RedirectorHandler implements MiddlewareInterface
+class RedirectHandler implements MiddlewareInterface
 {
 
     protected $urlHelper;
@@ -19,7 +19,7 @@ class RedirectorHandler implements MiddlewareInterface
 
     public function __invoke(Request $request, Response $response, callable $out = null)
     {
-        if ($response->getStatusCode() == 403 &&
+        if ($response->getStatusCode() == 401 &&
             !$this->isXmlHttpRequest($request)) {
 
             $response = $response->withHeader(

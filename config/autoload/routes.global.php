@@ -14,6 +14,7 @@ return [
             App\Action\Beer\Update::class => App\Factory\Beer\Update::class,
             App\Action\Beer\Create::class => App\Factory\Beer\Create::class,
             App\Action\Beer\Delete::class => App\Factory\Beer\Delete::class,
+            App\Action\Login\Login::class => App\Factory\Login\Login::class,
             App\Middleware\Format\Html::class => App\Factory\Middleware\Format\Html::class
         ],
     ],
@@ -70,6 +71,13 @@ return [
             ],
             'allowed_methods' => ['DELETE'],
         ],
-
+        [
+            'name' => 'login',
+            'path' => '/login',
+            'middleware' => [
+                App\Action\Login\Login::class,
+            ],
+            'allowed_methods' => ['POST'],
+        ],
     ],
 ];

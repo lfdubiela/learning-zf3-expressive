@@ -2,11 +2,10 @@
 
 namespace App\Middleware\Format;
 
-use Zend\Stratigility\MiddlewareInterface;
-use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use Zend\Expressive\Template\TemplateRendererInterface;
+use Psr\Http\Message\ServerRequestInterface as Request;
 use Zend\Diactoros\Response\HtmlResponse;
+use Zend\Stratigility\MiddlewareInterface;
 
 class Html implements MiddlewareInterface
 {

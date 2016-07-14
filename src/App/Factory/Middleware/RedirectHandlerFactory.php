@@ -6,7 +6,7 @@ use App\Middleware\RedirectHandler;
 use Interop\Container\ContainerInterface;
 use Zend\Expressive\Helper\UrlHelper;
 
-class RedirectHanderFactory
+class RedirectHandlerFactory
 {
     public function __invoke(ContainerInterface $container)
     {

@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'debug' => false,
+    'debug' => true,
 
-    'config_cache_enabled' => true,
+    'config_cache_enabled' => false,
 
     'zend-expressive' => [
         'error_handler' => [

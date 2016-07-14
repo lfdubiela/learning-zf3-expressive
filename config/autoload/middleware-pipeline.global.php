@@ -7,6 +7,7 @@ return [
         'factories' => [
             Helper\ServerUrlMiddleware::class => Helper\ServerUrlMiddlewareFactory::class,
             Helper\UrlHelperMiddleware::class => Helper\UrlHelperMiddlewareFactory::class,
+            App\Middleware\RedirectHandler::class => App\Factory\Middleware\RedirectHandlerFactory::class,
         ],
     ],
     // This can be used to seed pre- and/or post-routing middleware
